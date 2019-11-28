@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript" src="./fabric.min.js"></script>
+  <script type="text/javascript" src="./fabric.extension.js"></script>
+  <script type="text/javascript" src="./jquery.min.js"></script>
+  <script type="text/javascript" src="./editor.js"></script>
+  <script>
+    $(function(){
+      editor = new editor('cv1') // initializing editor class with canvas id 'cv1'
+      editor.init(1024, 768); // initializing the canvas with provided size
+      editor.addImage('./img/computer.png', null); // adding the image with default callback
+      editor.addImage('./img/88d6f55ff7491a67a0066ea0e3422d92.jpg', null);
+      editor.removeImage('computer.png');
+    });
+  </script>
+</head>
+<body>
+  <div id="container">
+    <canvas id="cv1"/>
+  </div>
+</body>
+</html>
